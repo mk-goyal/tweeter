@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Home from './components/home'
 import Notification from './components/notification'
@@ -10,6 +10,12 @@ import Logo from './components/logo'
 import NewTweet from './components/newTweet'
 
 function App() {
+  const [userData,setUserData] = useState(
+    {
+        name:'mukesh',
+        bio: 'studies mechanical engineering at IIT KANPUR.',
+        tweets: 7
+})
   return (
     <div className="App">
       <div className="sidebar">
@@ -20,7 +26,7 @@ function App() {
         <NewTweet/>
       </div>
       <div className="main">
-        <IdProfile/>
+        <IdProfile userName={userData.name} bio={userData.bio} n={userData.tweets}/>
         <Tweets/>
       </div>
       <div className="rightSidebar">
