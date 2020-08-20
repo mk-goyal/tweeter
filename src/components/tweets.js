@@ -2,14 +2,14 @@ import React from 'react';
 import Tweet from './tweet'
 
 
-function Tweets() {
+function Tweets({tweet}) {
     return(
         <div className="home">
             <h1>tweets</h1>
-            <Tweet />
-            <Tweet />
-            <Tweet />
-            <Tweet />
+            <Tweet tweet={tweet}/>
+            <Tweet tweet={tweet}/>
+            <Tweet tweet={tweet}/>
+            <Tweet tweet={tweet}/>
 
         </div>
     )

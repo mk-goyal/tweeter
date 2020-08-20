@@ -10,30 +10,34 @@ import Logo from './components/logo'
 import NewTweet from './components/newTweet'
 
 function App() {
-  const [userData,setUserData] = useState(
-    {
+  const [userData,setUserData] = useState({
+    user : {
         name:'mukesh',
         bio: 'studies mechanical engineering at IIT KANPUR.',
-        tweets: 7
+        tweets: 7,
+        tweet:'Lorem ipsum dolor sit amet consectetur adipisicing elit.Id reiciendis quos qui dolores, iste saepe temporibus magni consectetur aspernatur praesentium quidem numquam,laudantium ipsum repellendus pariatur ullam atque quibusdam autem!'
+          }
+    
 })
   return (
-    <div className="App">
-      <div className="sidebar">
-        <Logo/>
-        <Home/>
-        <Notification/>
-        <Profile/>
-        <NewTweet/>
-      </div>
-      <div className="main">
-        <IdProfile userName={userData.name} bio={userData.bio} n={userData.tweets}/>
-        <Tweets/>
-      </div>
-      <div className="rightSidebar">
-        <Search/>
-      </div>
-    </div>
-  );
+          <div className="App">
+            
+              <div className="sidebar">
+                <Logo/>
+                <Home/>
+                <Notification/>
+                <Profile/>
+                <NewTweet/>
+              </div>
+              <div className="main">
+                <IdProfile userName={userData.user.name} bio={userData.user.bio} n={userData.user.tweets}/>
+                <Tweets tweet={userData.user.tweet}/>
+              </div>
+              <div className="rightSidebar">
+                <Search/>
+              </div>
+          </div>
+        )
 }
 
 export default App;
