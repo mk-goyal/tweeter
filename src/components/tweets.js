@@ -23,15 +23,12 @@ function Tweets() {
     
     return(
         <div className="home">
-            <h1>{tweetData.myName}</h1>
-
+            <h1>Tweets</h1>
             {
-        tweetData.twits.map(twit => 
-            { return <Tweet myName={tweetData.myName} tweet={tweetData.twits.twit}/>}
+        tweetData.twits.map(twit1 => 
+            { return <Tweet myName={tweetData.myName}  tweet={twit1.twit}/>}
             )
     }
-            
-
         </div>
     )
 }

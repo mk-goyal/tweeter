@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import './components/tweet.css';
 import Home from './components/home'
 import Notification from './components/notification'
 import Profile from './components/profile'
@@ -21,7 +22,6 @@ function App() {
 })
   return (
           <div className="App">
-            
               <div className="sidebar">
                 <Logo/>
                 <Home/>
