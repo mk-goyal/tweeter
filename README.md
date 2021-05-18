@@ -1,4 +1,4 @@
-I'm currently working on twitter clone. This project hasn't completed yet.
+I'm currently working on twitter clone.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
